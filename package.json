@@ -1,0 +1,32 @@
+{
+  "name": "es6-and-mocha",
+  "version": "1.0.0",
+  "description": "Basic setup to illustrate how to make Mocha and Chai run with ES6 modules.",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "node_modules/rollup/bin/rollup -c scripts/rollup.config.js",
+    "start": "node dist/index.min.js",
+    "test": "node_modules/mocha/bin/mocha --require babel-core/register tests/test.js"
+  },
+  "keywords": [
+    "mochajs",
+    "chaijs",
+    "es6",
+    "modules"
+  ],
+  "author": "CH Chua",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "rollup": "^0.67.3"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
